@@ -1,0 +1,92 @@
+<?php      
+
+/* No hardoced URL's in examples. Just copy the folder to server. */  
+$folder = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']);
+$url    = sprintf('http://%s%sphp/', $_SERVER['SERVER_NAME'], $folder);
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" debug="true">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Style File Demo</title>
+<meta name="generator" content="Mephisto" />
+<link href="http://www.appelsiini.net/stylesheets/main.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/tuupola" title="Atom feed" />
+<script src="/mint/?js" type="text/javascript"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script src="http://static.taevas.ee/js/jquery-1.2.1.mini.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery.stylefile.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+      $("input.file_1").stylefile({ 
+          image: "choose-file.gif",
+          image_height : 22,
+          image_width : 82
+      });
+      $("input.file_2").stylefile({ 
+          image: "greyscale_23.gif",
+          image_height : 31,
+          image_width : 26
+      });      
+  });
+</script>
+
+<style type="text/css">
+#sidebar {
+  width: 0px;
+}
+
+#content {
+  width: 770px;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div id="wrap"> 
+    <div id="header">
+      <p>
+        <h1>Style Fyle</h1><br />
+        <small>Style those darn file inputs. With jQuery of course.</small>
+        <ul id="nav">
+          <li id="first"><a href="/" class="active">weblog</a></li>
+          <li><a href="/projects" class="last">projects</a></li>
+          <!--
+          <li><a href="/cv" class="last">cv</a></li>
+        -->
+        </ul>
+      </p>
+    </div>
+
+    <div id="content">
+      
+        <div class="entry">
+
+            <form action="#">
+              <input type="file" class="file_1" />
+            </form>
+            <br/>
+            <form action="#">
+              <input type="file" class="file_2" />
+            </form>
+
+        </div>
+
+    <div id="sidebar">
+    </div>
+  
+  <div id="footer">
+  </div>
+
+  <script type="text/javascript">
+    _uacct = "UA-190966-1";
+    urchinTracker();
+  </script>
+
+</body>
+</html>
+
