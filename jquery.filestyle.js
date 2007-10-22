@@ -24,7 +24,7 @@
         if(options) {
             $.extend(settings, options);
         };
-                
+                        
         return this.each(function() {
             
             var self = this;
@@ -38,7 +38,7 @@
                             .css("overflow", "hidden")
                             .css("cursor", "pointer");
                             
-            var filename = $("<input>")
+            var filename = $('<input class="file">')
                              .css("display", "inline")
                              .css("width", settings.width + "px")
 
@@ -47,10 +47,15 @@
 
             $(self).css("position", "relative")
                    .css("height", settings.image_height + "px")
-                   .css("margin-left", "-168px")
                    .css("width", settings.width + "px")
                    .css("display", "inline")
-                   .css("opacity", "1");
+                   .css("opacity", "0");
+            
+            if ($.browser.mozilla) {
+                $(self).css("margin-left", "-168px");
+            } else {
+                $(self).css("margin-left", settings.image_width - settings.width + "px");                
+            };
 
             $(self).bind("change", function() {
                 filename.val($(self).val());
