@@ -30,8 +30,8 @@
             
             var self = this;
             var wrapper = $("<div>")
-                            .css("width", settings.image_width + "px")
-                            .css("height", settings.image_height + "px")
+                            .css("width", settings.imagewidth + "px")
+                            .css("height", settings.imageheight + "px")
                             .css("background", "url(" + settings.image + ") 0 0 no-repeat")
                             .css("background-position", "right")
                             .css("display", "inline")
@@ -48,7 +48,7 @@
             $(self).wrap(wrapper);
 
             $(self).css("position", "relative")
-                   .css("height", settings.image_height + "px")
+                   .css("height", settings.imageheight + "px")
                    .css("width", settings.width + "px")
                    .css("display", "inline")
                    .css("opacity", "0");
@@ -56,7 +56,7 @@
             if ($.browser.mozilla) {
                 $(self).css("margin-left", "-168px");
             } else {
-                $(self).css("margin-left", settings.image_width - settings.width + "px");                
+                $(self).css("margin-left", settings.imagewidth - settings.width + "px");                
             };
 
             $(self).bind("change", function() {
