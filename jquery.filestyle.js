@@ -42,6 +42,7 @@
             var filename = $('<input class="file">')
                              .css("display", "inline")
                              .css("width", settings.width + "px")
+                             .addClass($(self).attr("class"));
 
             $(self).before(filename);
             $(self).wrap(wrapper);
