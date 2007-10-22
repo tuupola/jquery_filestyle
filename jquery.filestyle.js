@@ -17,8 +17,9 @@
     
     $.fn.stylefile = function(options) {
                 
+        /* TODO: This should not override CSS. */
         var settings = {
-            width : 650
+            width : 250
         };
                 
         if(options) {
