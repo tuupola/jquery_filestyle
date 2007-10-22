@@ -18,7 +18,7 @@
     $.fn.stylefile = function(options) {
                 
         var settings = {
-            width : 250
+            width : 650
         };
                 
         if(options) {
@@ -29,28 +29,28 @@
             
             var self = this;
             var wrapper = $("<div>")
-                            .css("width", settings.image_width)
+                            .css("width", settings.image_width + "px")
                             .css("height", settings.image_height + "px")
                             .css("background", "url(" + settings.image + ") 0 0 no-repeat")
                             .css("background-position", "right")
                             .css("display", "inline")
+                            .css("position", "absolute")
                             .css("overflow", "hidden")
                             .css("cursor", "pointer");
                             
             var filename = $("<input>")
                              .css("display", "inline")
                              .css("width", settings.width + "px")
-                             .css("font-size", "10px");
 
             $(self).before(filename);
             $(self).wrap(wrapper);
 
             $(self).css("position", "relative")
                    .css("height", settings.image_height + "px")
-                   .css("margin-left", settings.image_width - settings.width + "px")
-                   .css("width", "250px")
+                   .css("margin-left", "-168px")
+                   .css("width", settings.width + "px")
                    .css("display", "inline")
-                   .css("opacity", "0.0");
+                   .css("opacity", "1");
 
             $(self).bind("change", function() {
                 filename.val($(self).val());
