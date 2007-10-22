@@ -20,6 +20,7 @@ $url    = sprintf('http://%s%sphp/', $_SERVER['SERVER_NAME'], $folder);
 <script src="jquery.filestyle.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function() {
+            
       $("input.file_1").stylefile({ 
           image: "choose-file.gif",
           image_height : 22,
@@ -111,7 +112,9 @@ $url    = sprintf('http://%s%sphp/', $_SERVER['SERVER_NAME'], $folder);
     <div id="content">
       
         <div class="entry">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            <h2>Plugin enabled</h2>
+            <a href="http://www.appelsiini.net/projects/filestyle">File Styled</a> input inherits its class from original 
+            file input. This way you can use CSS for additional styling.
             <form action="#">
                 <input type="file" class="file_1" /><br />
                 <input type="file" class="file_2" /><br />
@@ -119,6 +122,16 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
                 <input type="file" class="file_4" /><br />
                 <input type="file" class="file_5" /><br />
             </form>
+            <h2>Plugin disabled</h2>
+            Same file inputs without plugin.
+            <form action="#">
+                <input type="file" /><br />
+                <input type="file" /><br />
+                <input type="file" /><br />
+                <input type="file" /><br />
+                <input type="file" /><br />
+            </form>
+
         </div>
 
     <div id="sidebar">
