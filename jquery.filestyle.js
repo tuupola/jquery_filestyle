@@ -51,7 +51,7 @@
                    .css("height", settings.imageheight + "px")
                    .css("width", settings.width + "px")
                    .css("display", "inline")
-                   .css("opacity", "0.5");
+                   .css("opacity", "0.0");
             
             //alert(navigator.platform);
             if ($.browser.mozilla) {
