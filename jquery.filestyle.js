@@ -51,10 +51,15 @@
                    .css("height", settings.imageheight + "px")
                    .css("width", settings.width + "px")
                    .css("display", "inline")
-                   .css("opacity", "0");
+                   .css("opacity", "0.5");
             
+            //alert(navigator.platform);
             if ($.browser.mozilla) {
-                $(self).css("margin-left", "-168px");
+                if (/Win/.test(navigator.platform)) {
+                    $(self).css("margin-left", "-142px");                    
+                } else {
+                    $(self).css("margin-left", "-168px");                    
+                };
             } else {
                 $(self).css("margin-left", settings.imagewidth - settings.width + "px");                
             };
