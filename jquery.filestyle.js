@@ -37,8 +37,7 @@
                                 "background-position": "right",
                                 "display": "inline",
                                 "position": "absolute",
-                                "overflow": "hidden",
-                                "cursor": "pointer"
+                                "overflow": "hidden"
                             });
                             
             var filename = $('<input class="file">')
@@ -56,6 +55,7 @@
                         "height": settings.imageheight + "px",
                         "width": settings.width + "px",
                         "display": "inline",
+                        "cursor": "pointer",
                         "opacity": "0.0"
                     });
 
