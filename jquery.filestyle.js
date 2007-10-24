@@ -30,30 +30,35 @@
             
             var self = this;
             var wrapper = $("<div>")
-                            .css("width", settings.imagewidth + "px")
-                            .css("height", settings.imageheight + "px")
-                            .css("background", "url(" + settings.image + ") 0 0 no-repeat")
-                            .css("background-position", "right")
-                            .css("display", "inline")
-                            .css("position", "absolute")
-                            .css("overflow", "hidden")
-                            .css("cursor", "pointer");
+                            .css({
+                                "width": settings.imagewidth + "px",
+                                "height": settings.imageheight + "px",
+                                "background": "url(" + settings.image + ") 0 0 no-repeat",
+                                "background-position": "right",
+                                "display": "inline",
+                                "position": "absolute",
+                                "overflow": "hidden",
+                                "cursor": "pointer"
+                            });
                             
             var filename = $('<input class="file">')
-                             .css("display", "inline")
-                             .css("width", settings.width + "px")
-                             .addClass($(self).attr("class"));
+                             .addClass($(self).attr("class"))
+                             .css({
+                                 "display": "inline",
+                                 "width": settings.width + "px"
+                             });
 
             $(self).before(filename);
             $(self).wrap(wrapper);
 
-            $(self).css("position", "relative")
-                   .css("height", settings.imageheight + "px")
-                   .css("width", settings.width + "px")
-                   .css("display", "inline")
-                   .css("opacity", "0.0");
-            
-            //alert(navigator.platform);
+            $(self).css({
+                        "position": "relative",
+                        "height": settings.imageheight + "px",
+                        "width": settings.width + "px",
+                        "display": "inline",
+                        "opacity": "0.0"
+                    });
+
             if ($.browser.mozilla) {
                 if (/Win/.test(navigator.platform)) {
                     $(self).css("margin-left", "-142px");                    
